@@ -1,0 +1,23 @@
+# Virtual Environment
+venv/
+env/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.vscode/
+.idea/
+
+# Django
+*.log
+db.sqlite3
+media/ 
+
+data/
+pyspark/data/
+
+run
