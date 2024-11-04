@@ -1,26 +1,37 @@
+# Feature Store - Astra DB Testing with PySpark & Locust
 
-# Virtual Environment
+
+## Setup 
+
+### Virtual Environment
 ```bash
 python -m venv venv
 ```
-# Activate Virtual Environment
+### Activate Virtual Environment
+
 ```bash
 source venv/bin/activate
 ```
 
-# Install Requirements
+### Install Requirements
 ```bash
 pip install -r requirements.txt
 ```
 
-# Loading the features
+# Loading the features with Python
 
 ```bash
 python load/load_features.py
 ```
 
+### Loading the features with Pyspark
 
-# Running Locust
+```bash
+./pyspark/run_pyspark.sh
+```
+
+
+### Running Locust
 
 ```bash
 locust -f locustfile.py
