@@ -24,18 +24,31 @@ pip install -r requirements.txt
 python load/load_features.py
 ```
 
-### Loading the features with Pyspark
+
+
+
+# Running Pyspark
+
+## Loading the features with Pyspark
 
 ```bash
 ./pyspark/run_pyspark.sh
 ```
 
+## Detailed command
 
-### Running Locust
+```bash
+$SPARK_HOME/bin/spark-submit \
+--packages com.datastax.spark:spark-cassandra-connector_2.12:3.3.0 \
+--files <secure_connect_bundle file path>.zip  \
+--conf spark.sql.extensions=com.datastax.spark.connector.CassandraSparkExtensions \
+load.py 
+
+```
+
+
+# Running Locust
 
 ```bash
 locust -f locustfile.py
 ```
-
-# Running Pyspark
-
